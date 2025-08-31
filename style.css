@@ -1,0 +1,359 @@
+/* Responsive events inside container */
+@media (max-width: 885px) {
+    .event {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        padding: 12px;
+    }
+
+    .event-img img,
+    .event-img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100%;
+        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+    }
+
+    .event-detail {
+        padding: 8px 0 0 0;
+        text-align: left;
+    }
+}
+
+@media (max-width: 600px) {
+    .event {
+        padding: 6px;
+        gap: 8px;
+    }
+
+    .event-detail {
+        font-size: 0.97rem;
+        padding: 4px 0 0 0;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efe8e8;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+header {
+    /*background-color: #2c513a;*/
+    position: sticky;
+    top: 0;
+    color: rgb(138, 86, 86);
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: inline-block;
+    text-align: left;
+    margin-left: 20px;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #272727;
+    padding: 10px 0;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+    width: 30px;
+    height: 25px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+.navbar a {
+    color: rgb(244, 239, 239);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgba(138, 86, 86, 0.2);
+    border-radius: 20px;
+}
+
+.hero {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* fills hero without distortion */
+    object-position: center;
+    /* keeps center sharp */
+    z-index: -1;
+    transition: opacity 1s ease-in-out;
+    filter: brightness(95%);
+    /* optional: keeps image a little clearer */
+}
+
+
+.overlay {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Section Headings */
+#about .heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2E7D32;
+    /* deep green */
+    font-weight: bold;
+}
+
+#about h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* About / Mission / Vision layout */
+.about,
+.mission,
+.vision {
+    background: #fff;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about:hover,
+.mission:hover,
+.vision:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Paragraphs */
+#about p {
+    line-height: 1.8;
+    color: #555;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/* Vision list */
+.vision ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.vision li {
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1rem;
+    list-style-type: disc;
+}
+
+#events h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #444;
+    text-align: left;
+}
+
+#events .heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    /* adds inner spacing */
+    gap: 30px;
+    /* built-in spacing between img & text */
+}
+
+.event-detail {
+    line-height: 1.5;
+    flex: 1;
+    padding: 10px;
+}
+
+#work {
+    padding: 40px 20px;
+    background: #1b1717;
+}
+
+#work h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #c5c2c2;
+    text-align: left;
+}
+
+#work .heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+.rowContent {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* space between cards */
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    /* makes it responsive */
+}
+
+.colContent {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.colContent:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== Small devices (phones) ===== */
+@media (max-width: 885px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+        position: static;
+    }
+
+    .logo img {
+        max-width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        flex-direction: row;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #272727;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 10;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px 20px;
+        border-bottom: 1px solid #444;
+        width: 100%;
+        text-align: right;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+
+}
+
+/* ===== Tablets (medium devices) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .event {
+        gap: 20px;
+    }
+
+    .colContent {
+        max-width: 300px;
+    }
+}
